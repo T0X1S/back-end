@@ -1,0 +1,438 @@
+/* Админ-панель — стилистика сайта Our Place */
+:root {
+  --c-primary: #d37657;
+  --c-dark: #35312e;
+  --c-light: #f5f1e9;
+  --c-red: #670A18;
+}
+
+/* Область контента */
+.admin-page .main {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  background: #faf9f7;
+  min-height: calc(100vh - 70px);
+}
+.admin-page .container,
+.admin-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Шапка админки */
+.admin-page .header {
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.admin-page .header_body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  padding: 14px 20px;
+}
+.admin-page .header a {
+  text-decoration: none;
+  color: var(--c-dark);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.admin-page .header a:hover {
+  color: var(--c-primary);
+  text-decoration: none;
+}
+.admin-page .header .btn {
+  border-radius: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+}
+.admin-page .header .btn-outline-primary {
+  border-color: var(--c-primary);
+  color: var(--c-primary);
+}
+.admin-page .header .btn-outline-primary:hover {
+  background: var(--c-primary);
+  color: #fff;
+  border-color: var(--c-primary);
+}
+.admin-page .header .btn-outline-secondary {
+  border-color: var(--c-dark);
+  color: var(--c-dark);
+}
+.admin-page .header .btn-outline-secondary:hover {
+  background: var(--c-dark);
+  color: #fff;
+  border-color: var(--c-dark);
+}
+.admin-page .header .ms-auto {
+  margin-left: auto;
+}
+
+/* Заголовки страниц */
+.admin-page-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--c-dark);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+.admin-page .container > h1,
+.admin-page .mb-3:first-of-type {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--c-dark);
+  margin-bottom: 1.25rem;
+}
+
+/* Карточки */
+.admin-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.admin-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--c-dark);
+  margin-bottom: 1.25rem;
+}
+.admin-card-form {
+  margin-bottom: 1.5rem;
+}
+.admin-form-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-dark);
+  margin-bottom: 1rem;
+  margin-top: 1.25rem;
+}
+
+/* Формы */
+.admin-form-group {
+  margin-bottom: 1rem;
+}
+.admin-form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--c-dark);
+  margin-bottom: 0.35rem;
+}
+.admin-form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--c-dark);
+  background: #fff;
+}
+.admin-form-control:focus {
+  outline: none;
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 2px rgba(211, 118, 87, 0.2);
+}
+.admin-checkbox-label {
+  font-size: 0.95rem;
+  color: var(--c-dark);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.admin-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Кнопки админки */
+.btn-admin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-admin-primary {
+  background: var(--c-primary);
+  color: #fff;
+}
+.btn-admin-primary:hover {
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(211, 118, 87, 0.4);
+  transform: scale(1.02);
+}
+.btn-admin-secondary {
+  background: var(--c-light);
+  color: var(--c-dark);
+  border: 1px solid rgba(0,0,0,0.15);
+}
+.btn-admin-secondary:hover {
+  color: var(--c-dark);
+  background: #ebe7df;
+}
+.btn-admin-outline {
+  background: transparent;
+  color: var(--c-dark);
+  border: 1px solid var(--c-dark);
+}
+.btn-admin-outline:hover {
+  color: var(--c-primary);
+  border-color: var(--c-primary);
+}
+
+/* Таблицы */
+.admin-page .table-responsive {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  background: #fff;
+}
+.admin-page .table {
+  margin-bottom: 0;
+  color: var(--c-dark);
+}
+.admin-page .table thead th {
+  background: var(--c-light);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 14px 16px;
+  border: none;
+  border-bottom: 2px solid rgba(0,0,0,0.06);
+}
+.admin-page .table tbody td {
+  padding: 14px 16px;
+  vertical-align: middle;
+  border-color: rgba(0,0,0,0.06);
+}
+.admin-page .table tbody tr:hover {
+  background: rgba(211, 118, 87, 0.04);
+}
+.admin-page .table .btn-sm {
+  border-radius: 8px;
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+.admin-page .table .btn-outline-primary {
+  border-color: var(--c-primary);
+  color: var(--c-primary);
+}
+.admin-page .table .btn-outline-primary:hover {
+  background: var(--c-primary);
+  color: #fff;
+}
+.admin-page .table .btn-outline-secondary {
+  border-color: #888;
+  color: #555;
+}
+.admin-page .table .btn-outline-danger {
+  border-color: #c00;
+  color: #c00;
+}
+.admin-page .table .btn-outline-danger:hover {
+  background: #c00;
+  color: #fff;
+}
+
+/* Кнопки над таблицей (Добавить товар и т.д.) */
+.admin-page .container > .btn-primary,
+.admin-page .container > a.btn {
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.admin-page .container > .btn-primary {
+  background: var(--c-primary);
+  border: none;
+}
+.admin-page .container > .btn-primary:hover {
+  background: #c06b4d;
+  box-shadow: 0 4px 12px rgba(211, 118, 87, 0.35);
+}
+
+/* Алерты */
+.admin-alert {
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.admin-alert-danger {
+  background: #fee;
+  color: #c00;
+  border: 1px solid #fcc;
+}
+.admin-hint {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Изображения товара */
+.admin-card-images {
+  margin-top: 0.5rem;
+}
+.admin-image-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+.admin-image-item {
+  background: var(--c-light);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.admin-image-thumb {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+.admin-image-placeholder {
+  width: 100%;
+  height: 120px;
+  background: #e0ddd5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+.admin-image-meta {
+  font-size: 0.8rem;
+  color: #555;
+  width: 100%;
+}
+.admin-image-url {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.admin-image-alt {
+  display: block;
+  margin-top: 2px;
+  color: var(--c-dark);
+}
+.admin-link-danger {
+  display: inline-block;
+  margin-top: 6px;
+  color: #c00;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+.admin-link-danger:hover {
+  text-decoration: underline;
+  color: #a00;
+}
+.admin-add-image-form {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.admin-add-image-form .admin-form-control {
+  max-width: 100%;
+}
+
+/* Главная админки — карточки разделов */
+.admin-page .admin-card.card,
+.admin-page a.admin-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.admin-page .admin-card.card:hover,
+.admin-page a.admin-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  color: inherit;
+}
+.admin-page .admin-card .card-body {
+  padding: 1.5rem 1.75rem;
+}
+.admin-page .admin-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--c-dark);
+  margin-bottom: 0.5rem;
+}
+.admin-page .admin-card .card-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Страницы редактирования (category_edit, user_edit и т.д.) — общие формы */
+.admin-page .container .form-label {
+  font-weight: 500;
+  color: var(--c-dark);
+  margin-bottom: 0.35rem;
+}
+.admin-page .container .form-control,
+.admin-page .container .form-select {
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  padding: 10px 14px;
+}
+.admin-page .container .form-control:focus {
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 2px rgba(211, 118, 87, 0.2);
+}
+.admin-page .container .btn-primary {
+  background: var(--c-primary);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+.admin-page .container .btn-primary:hover {
+  background: #c06b4d;
+  box-shadow: 0 4px 12px rgba(211, 118, 87, 0.35);
+}
+.admin-page .container .btn-secondary {
+  background: var(--c-light);
+  color: var(--c-dark);
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+.admin-page .container .text-danger {
+  color: #c00;
+  margin-bottom: 1rem;
+}
